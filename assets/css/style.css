@@ -5,17 +5,18 @@
 }
 
 :root {
-    --first: rgba(68,88,119,1);
-    --second: rgba(146,204,206,1);
-    --third: rgba(49,52,61,1);
+    --first: rgba(5, 0, 0, 0.966);
+    --second: rgb(162, 202, 247);
+    --third: rgb(27, 27, 27);
 }
 
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family:Garamond,serif;
     position: relative;
-    line-height: 2;
+    line-height: 1;
+    font-size: 15px;
 }
 
 header {
@@ -23,7 +24,7 @@ header {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 10px;
+    padding: 30px;
     align-items: center;
     background-color: var(--third);
 }
@@ -31,8 +32,9 @@ header {
 header h1 {
     color:  var(--third);
     background-color: var(--second);
-    padding: 5px;
-    font-size: 4vw;
+    padding: 30px;
+    font-size: 45px;
+    border-radius: 5px;
 }
 
 nav {
@@ -65,16 +67,16 @@ nav a:hover {
     flex-flow: column;
     justify-content: flex-end;
     align-items: flex-end;
-    background-size: 50%;
-    background-image:url(/assets/images/port.JPG);
-    width: 100%;
-    height: 200%;
+    background-size: 70%;
+    width: 180%;
+    height: 250%;
     margin-bottom: 0px;
     background-position:cover;
+    background-color: var(--second);
 }
 
 .hero-text {
-    float: right;
+    float: center;
     border: var(--second);
     background-color: var(--second);
     padding-right: 2%;
@@ -108,12 +110,17 @@ Main h2 {
     text-align: right;
     font-size: 40px; 
 }
-
+img {
+    border-radius: 8px;
+    
+    box-shadow: 10px 10px 5px grey;
+}
 #about div {
-    flex: 0 0 75%;
+    flex: 0 0 50%;
     display:flex;
     flex-direction: row;
     justify-content: space-around;
+    font-size: 25px;
 }
 
 .work-grid {
@@ -127,8 +134,6 @@ Main h2 {
 
 .work-item {
     color: var(--first);
-    background-color: var(--third);
-    background-repeat: no-repeat;
     background-size: 100%;
     border: 5px solid var(--second);
     transition: all 0.2s ease-in;
@@ -136,43 +141,52 @@ Main h2 {
     display: flex;
     align-items: flex-end;
     grid-column: span 4;
+    border-radius: 8px;
+    box-shadow: 10px 10px 5px grey;
 }
 .work-item:first-child {
-    grid-column: span 8;
+    grid-column: span 10;
     grid-row: span 2;
 }
 
 .work-item div {
-    margin: 20px 0;
+    margin: 10px 0;
     color: var(--third);
     background-color: var(--second);
     padding: 8px 10px;
 }
 /* Insert project 1 */
-.easy Stack {
-    background-image: url(/assets/images/easy_stack.JPG);
-    opacity: 0.8;
+.easystack {
+    background-image: url("../images/easy_stack2.JPG");
+    background-repeat: no-repeat;
+    opacity: 1;
 }
 
-.easy stack:hover {
+.easystack:hover {
     opacity: 1;
 }
 /* insert refactor */
 .refactor {
-    background-image: url(/assets/images/refactor.JPG);
-    opacity: 0.8;
+    background-image: url("../images/refactor.JPG");
+    background-repeat: no-repeat;
+    opacity: 3;
 }
-.Refactor:hover {
+.refactor:hover {
     opacity: 1;
 }
 
-.work day scheduler {
-    background-image: url(/assets/images/work_day_shedu.JPG);
+.workday {
+    background-image: url("../images/work_day_shedu.JPG");
+    background-repeat: no-repeat;
     opacity: 0.8;
 }
-.work day scheduler:hover {
-    background-image: url();
+.workday:hover {
     opacity: 1;
+}
+h3 {
+    color: black;
+    font-size: x-large;
+    font-weight: bolder;
 }
 
 footer {
@@ -221,6 +235,7 @@ address a:hover {
         width: 30%;
         font-size: 3vw;
         line-height: 1;
+        
     }
     nav {
         display: flex;
@@ -233,4 +248,11 @@ address a:hover {
     nav a:last-child {
         margin-right: 0;
     }
+    /* mobile */
+@media (max-width: 700px) {
+     .row, .navbar {   
+      flex-direction: column;
+    }
+}
+
 }

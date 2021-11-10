@@ -2,18 +2,19 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    text-align: left;
 }
 
 :root {
     --first: rgba(5, 0, 0, 0.966);
-    --second: rgb(162, 202, 247);
+    --second: rgb(49, 130, 223);
     --third: rgb(27, 27, 27);
 }
 
 body {
     margin: 0;
     padding: 0;
-    font-family:Garamond,serif;
+    font-family:'Kaushan Script', cursive; ;
     position: relative;
     line-height: 1;
     font-size: 15px;
@@ -68,7 +69,7 @@ nav a:hover {
     justify-content: flex-end;
     align-items: flex-end;
     background-size: 70%;
-    width: 180%;
+    width: 100%;
     height: 250%;
     margin-bottom: 0px;
     background-position:cover;
@@ -112,9 +113,11 @@ Main h2 {
 }
 img {
     border-radius: 8px;
-    
+    height: 10%;
+    width: 10%;
     box-shadow: 10px 10px 5px grey;
 }
+
 #about div {
     flex: 0 0 50%;
     display:flex;
@@ -126,7 +129,11 @@ img {
 .work-grid {
     flex: 0 0 75%;
     display: grid;
-    grid-auto-rows: 200px;
+    grid-auto-rows: 280px;
+    margin: auto;
+    border-radius: 10px;
+    padding-left: 30px;
+    padding-right: 0;
     grid-auto-flow: dense;
     row-gap: 20px;
     column-gap: 20px;
@@ -155,34 +162,39 @@ img {
     background-color: var(--second);
     padding: 8px 10px;
 }
+
+
+
 /* Insert project 1 */
-.easystack {
-    background-image: url("../images/easy_stack2.JPG");
+.Unearthly-Venues {
+    background-image: url("../images/Unearthly_v.JPG");
+    background-size: cover;
     background-repeat: no-repeat;
     opacity: 1;
+    border-radius: 10px;
+    box-shadow: 10px 10px 5px grey;
 }
 
-.easystack:hover {
+.Easystack {
+    background-image: url("../images/easy_stack2.JPG");
+    background-size: cover;
+    background-repeat: no-repeat;
     opacity: 1;
+    border-radius: 10px;
+    box-shadow: 10px 10px 5px grey;
 }
+
 /* insert refactor */
-.refactor {
-    background-image: url("../images/refactor.JPG");
+.Work-sched {
+    background-image: url("../images/work_day_shedu.JPG");
+    background-size: 50%;
     background-repeat: no-repeat;
     opacity: 3;
-}
-.refactor:hover {
-    opacity: 1;
+    border-radius: 10px;
+    box-shadow: 10px 10px 5px grey;
 }
 
-.workday {
-    background-image: url("../images/work_day_shedu.JPG");
-    background-repeat: no-repeat;
-    opacity: 0.8;
-}
-.workday:hover {
-    opacity: 1;
-}
+
 h3 {
     color: black;
     font-size: x-large;
